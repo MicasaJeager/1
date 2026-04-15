@@ -19,6 +19,10 @@ Bu repoda avvalgi 8 ta Web3.js topshiriq va yangi frontend/DApp topshiriqlari ma
 - `10_react_dapp/` - React.js bilan qayta yozilgan DApp
 - `11_testnet_deploy_guide.md` - testnetga ulash va deploy bo'yicha qo'llanma
 
+## 3-bosqich: Solidity Topshiriq
+
+- `12_hospital_queue_contract/` - shifoxona navbat olish smart-kontrakti (`payable`, `require`, `mapping`, `owner-only withdraw`, `event`, `if/else`)
+
 ## React DApp ishga tushirish
 
 ```bash
