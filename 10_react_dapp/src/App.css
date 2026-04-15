@@ -1,0 +1,149 @@
+:root {
+  --bg: #eff5f2;
+  --panel: #ffffff;
+  --text: #21262d;
+  --muted: #67707b;
+  --border: #cedad3;
+  --brand: #0f766e;
+  --pending: #c47b10;
+  --success: #1d8e44;
+  --error: #bb3030;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top right, #d9efe4 0, transparent 38%),
+    radial-gradient(circle at bottom left, #f9ebd5 0, transparent 34%),
+    var(--bg);
+}
+
+.container {
+  max-width: 920px;
+  margin: 34px auto;
+  padding: 0 16px 40px;
+}
+
+h1,
+h2 {
+  margin: 0 0 10px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 14px;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+label {
+  width: 78px;
+  font-weight: 700;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 9px 12px;
+  border-radius: 9px;
+}
+
+input,
+select {
+  border: 1px solid var(--border);
+  min-width: 240px;
+}
+
+button {
+  border: none;
+  background: var(--brand);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:hover {
+  filter: brightness(1.06);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mono {
+  font-family: Consolas, "Courier New", monospace;
+  word-break: break-all;
+}
+
+.status {
+  display: inline-block;
+  margin: 0;
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.4px;
+  font-weight: 700;
+}
+
+.status-idle {
+  background: #6b7280;
+}
+
+.status-pending {
+  background: var(--pending);
+}
+
+.status-success {
+  background: var(--success);
+}
+
+.status-error {
+  background: var(--error);
+}
+
+@media (max-width: 700px) {
+  .line {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  label {
+    width: auto;
+  }
+
+  input,
+  select,
+  button {
+    width: 100%;
+    min-width: 0;
+  }
+}
+

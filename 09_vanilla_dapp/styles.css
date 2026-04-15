@@ -1,0 +1,151 @@
+:root {
+  --bg: #f8f4ec;
+  --panel: #fffdf8;
+  --text: #1f2329;
+  --muted: #6d737b;
+  --border: #d9d3c7;
+  --accent: #2f7d57;
+  --pending: #c57a11;
+  --success: #1f8f42;
+  --error: #b4323a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background:
+    radial-gradient(circle at 0% 0%, #f2e6d4 0, transparent 45%),
+    radial-gradient(circle at 100% 100%, #dbeadf 0, transparent 50%),
+    var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 860px;
+  margin: 36px auto;
+  padding: 0 16px 28px;
+}
+
+h1,
+h2 {
+  margin: 0 0 10px;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 14px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+label {
+  min-width: 78px;
+  font-weight: 600;
+}
+
+select,
+input,
+button {
+  font: inherit;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  padding: 9px 11px;
+}
+
+select,
+input {
+  min-width: 220px;
+  background: #fff;
+}
+
+button {
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:hover {
+  filter: brightness(1.05);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.mono {
+  font-family: Consolas, "Courier New", monospace;
+  word-break: break-all;
+}
+
+.status {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.72rem;
+}
+
+.status-idle {
+  background: #6b7280;
+}
+
+.status-pending {
+  background: var(--pending);
+}
+
+.status-success {
+  background: var(--success);
+}
+
+.status-error {
+  background: var(--error);
+}
+
+@media (max-width: 640px) {
+  .container {
+    margin-top: 20px;
+  }
+
+  label,
+  select,
+  input {
+    width: 100%;
+    min-width: 0;
+  }
+}
+

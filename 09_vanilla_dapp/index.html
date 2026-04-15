@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla Web3 DApp</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Simple DApp (HTML/CSS/JS)</h1>
+      <p class="muted">Connect wallet, read contract value, send transaction.</p>
+
+      <section class="card">
+        <h2>Wallet Connection</h2>
+        <div class="row">
+          <label for="walletType">Wallet:</label>
+          <select id="walletType">
+            <option value="metamask">MetaMask</option>
+            <option value="walletconnect">WalletConnect</option>
+            <option value="coinbase">Coinbase Wallet</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label for="networkType">Network:</label>
+          <select id="networkType">
+            <option value="localhost">Localhost 8545</option>
+            <option value="sepolia">Sepolia Testnet</option>
+          </select>
+        </div>
+
+        <button id="connectWalletBtn">Connect Wallet</button>
+        <p id="accountInfo" class="mono muted">Wallet not connected</p>
+      </section>
+
+      <section class="card">
+        <h2>Read Contract</h2>
+        <button id="readValueBtn">Read getValue()</button>
+        <p class="mono">Current value: <span id="currentValue">-</span></p>
+      </section>
+
+      <section class="card">
+        <h2>Write Contract</h2>
+        <form id="writeForm">
+          <label for="newValueInput">New value</label>
+          <input id="newValueInput" type="number" min="0" required />
+          <button type="submit">Send setValue()</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Transaction Status</h2>
+        <p id="txStatus" class="status status-idle">idle</p>
+        <p id="txDetails" class="mono muted">No transaction yet.</p>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
+
