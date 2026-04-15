@@ -23,6 +23,10 @@ Bu repoda avvalgi 8 ta Web3.js topshiriq va yangi frontend/DApp topshiriqlari ma
 
 - `12_hospital_queue_contract/` - shifoxona navbat olish smart-kontrakti (`payable`, `require`, `mapping`, `owner-only withdraw`, `event`, `if/else`)
 
+## 4-bosqich: NFT + Vote DApp
+
+- `13_nft_vote_dapp/` - NFT yaratish, Sepolia deploy, React frontend, ethers integratsiya, proposal CRUD/vote, UX va demo slaydlar
+
 ## React DApp ishga tushirish
 
 ```bash
